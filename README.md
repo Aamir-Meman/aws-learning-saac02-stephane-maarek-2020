@@ -2,7 +2,7 @@
 This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - [Section 1: Introduction - AWS Certified Solutions Architect Associate](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-1-introduction---aws-certified-solutions-architect-associate)
 - [Section 3 AWS Fundamentals: IAM and EC2](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-3-aws-fundamentals-iam-and-ec2)
-  -[3.1 AWS Regions and AZs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#31-aws-regions-and-azs)
+   - [3.1 AWS Regions and AZs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#31-aws-regions-and-azs)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
