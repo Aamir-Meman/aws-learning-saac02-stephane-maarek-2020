@@ -10,7 +10,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - AWS powers some of the biggest websites in the world
   - Amazon.com
   - Netflix
----
+
 # Section 3 AWS Fundamentals: IAM and EC2
 
 ## 3.1 AWS Regions and AZs 
@@ -26,7 +26,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - Each Availaibilty Zone(AZ) is one or more discrete data centers with redundant power, networking and connectivity.
 - They are seperate from each other, so that they are isolated from disasters.
 - They are connected with high bandwidth, ultra-low latency networking.
----
+
 ## 3.2 IAM Introduction
 
 **Q=1 What is an IAM**
@@ -59,7 +59,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - And even less, NEVER EVER EVER COMMIT YOUR IAM credentials.
 - Never use the ROOT account except for initial setup.
 - Never use ROOT IAM Credentials.
----
+
 ## 3.5 EC2 Introduction
 
 **Q=1 What is EC2 (Elastic Compute Cloud)**
@@ -69,7 +69,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - Storing data on virtual drives (EBS)
   - Distributing load across machines(ELB)
   - Scaling the services using an auto-scaling group (ASG)
----
+
 ## 3.12 Introduction to Security Groups
 
 **Q=1 What is SG's?**
@@ -94,7 +94,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - If your application gives a "connection refused" error, then it's an application error or it is not launched.
 - All **inbound** traffic is blocked by default.
 - All **outbound** traffic is authorised by default.
----
+
 ## 3.14 Private vs Public vs Elastic IP
 
 **Q=1 Fundamental Difference between Private and Public IP (IPv4)**
@@ -129,7 +129,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - We can't use a private IP, because we are not in the same network
   - We can only use the public IP
 - If your machine is stopped and then started, the public IP can change.
----
+
 ## 3.16 EC2 User Data
 
 **Q=1 What is EC2 User Data?**
@@ -142,7 +142,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - Downloading common files from the internet
   - Anything you can think of
 - The **EC2 User Data Script runs with the root user**
----
+
 ## 3.17 EC2 Instance Launch Types
 
 **Q=1 What are EC2 Instance Launch Types?**
@@ -202,7 +202,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - Instances running on hardware that's dedicated to you.
 - May **share hardware with other instances in same account**.
 - No control over instance placement ( can move hardware after Stop/Start)
----
+
 ## 3.18 Spot Instances & Spot Fleet
 
 **Q=1 What is EC2 Spot Instance Requests?**
@@ -232,7 +232,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - diversified: distributed across all pools (great for availaibility, long workloads)
    - capacityOptimized: pool with optimal capacity for the number of instances
 - Spot Fleets allow us to automatically request Spot Instances with the lowest price.
-----
+
 ## 3.19 EC2 Instance Types Deep Dive
 
 **Q=1 The EC2 Instance Types = Mains ones**
