@@ -11,6 +11,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [3.17 EC2 Instance Launch Types](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#317-ec2-instance-launch-types)
    - [3.18 Spot Instances & Spot Fleet](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#318-spot-instances--spot-fleet)
    - [3.19 EC2 Instance Types Deep Dive](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#319-ec2-instance-types-deep-dive)
+   - [3.20 EC2 AMIs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#320-ec2-amis)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
@@ -305,5 +306,3 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - Do not use an AMI you don't trust.
   - Some AMIs might come with malware or may not be secure for enterprise.
 ---
-**Q=4 AMI Storage**
-- 
