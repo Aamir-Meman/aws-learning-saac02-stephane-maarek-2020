@@ -306,3 +306,14 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - Do not use an AMI you don't trust.
   - Some AMIs might come with malware or may not be secure for enterprise.
 ---
+**Q=4 AMI Storage**
+- Your AMI take place and they live in Amazon S3.
+- Amazon S3 is a durable, cheap and resilient storage where most of your backups will live(but you won't see them in the S3 console).
+- **By default, your AMIs are private, and locked for your account/region**
+- You can also make your AMIs public and share them with other AWS accounts or sell them on the AMI Marketplace
+----------
+**Q=5 AMI Pricing**
+- AMIs live in Amazon S3, **so you get charged for the actual space in takes in Amazon S3**.
+- Overall it is **quite inexpensive** to store private AMIs
+- Make sure to remove the AMIs you don't use.
+-------
