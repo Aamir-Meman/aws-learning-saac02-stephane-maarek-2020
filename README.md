@@ -268,3 +268,42 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - You pay extra money if you go over your credit balance, but you don't lose in performance
 - Overall, **it is a new offering, so be careful, costs could go high if you are not monitoring the health of your instances.**
 
+## 3.2 EC2 AMIs
+
+**Q=1 What's an AMI**
+- As we saw, AWS comes with base images such as:
+  - Ubuntu
+  - Fedora
+  - RedHat
+  - Debian
+  - Windows
+  - Etc...
+- These images can be customized at runtime using EC2 User data
+- But what if we could create our own image, ready to go?
+- **That's an AMI - an image use to create our instances**
+---
+**Q=2 Why would you use a custom AMI?**
+- Using a custom built AMI can provide the following advantages:
+  - Pre-installed packages needed
+  - Faster boot time (no need for ec2 user data at boot time)
+  - Machine comes configured with monitoring/enterprise software
+  - Security concerns - control over the machines in the network
+  - Control of maintenance and updates of AMIs over time
+  - Active Directory Integration out of the box
+  - Installing your app ahead of time (for faster deploys when auto-scaling)
+  - Using someone else's AMI that is optimised for running an app,DB etc..
+- **AMI are built for a specific AWS region (!)**
+---
+**Q=3 Using Public AMIs**
+- You can leverage AMIs from other people
+- You can also pay for other people's AMI by the hour
+  - These people have optimised the software
+  - The machine is easy to run and configure
+  - You basically rent "expertise" from the AMI creator
+- **AMI can be found and published on the Amazon Marketplace**
+-**Warning**
+  - Do not use an AMI you don't trust.
+  - Some AMIs might come with malware or may not be secure for enterprise.
+---
+**Q=3 AMI Storage**
+- 
