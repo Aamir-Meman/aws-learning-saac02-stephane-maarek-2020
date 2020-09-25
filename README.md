@@ -268,7 +268,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - You pay extra money if you go over your credit balance, but you don't lose in performance
 - Overall, **it is a new offering, so be careful, costs could go high if you are not monitoring the health of your instances.**
 
-## 3.2 EC2 AMIs
+## 3.20 EC2 AMIs
 
 **Q=1 What's an AMI**
 - As we saw, AWS comes with base images such as:
@@ -305,5 +305,5 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - Do not use an AMI you don't trust.
   - Some AMIs might come with malware or may not be secure for enterprise.
 ---
-**Q=3 AMI Storage**
+**Q=4 AMI Storage**
 - 
