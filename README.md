@@ -302,7 +302,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - The machine is easy to run and configure
   - You basically rent "expertise" from the AMI creator
 - **AMI can be found and published on the Amazon Marketplace**
--**Warning**
+- **Warning**
   - Do not use an AMI you don't trust.
   - Some AMIs might come with malware or may not be secure for enterprise.
 ---
