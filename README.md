@@ -3,6 +3,14 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - [Section 1: Introduction - AWS Certified Solutions Architect Associate](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-1-introduction---aws-certified-solutions-architect-associate)
 - [Section 3 AWS Fundamentals: IAM and EC2](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-3-aws-fundamentals-iam-and-ec2)
    - [3.1 AWS Regions and AZs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#31-aws-regions-and-azs)
+   - [3.2 IAM Introduction](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#32-iam-introduction)
+   - [3.5 EC2 Introduction](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#35-ec2-introduction)
+   - [3.12 Introduction to Security Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#312-introduction-to-security-groups)
+   - [3.14 Private vs Public vs Elastic IP](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#314-private-vs-public-vs-elastic-ip)
+   - [3.16 EC2 User Data](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#316-ec2-user-data)
+   - [3.17 EC2 Instance Launch Types](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#317-ec2-instance-launch-types)
+   - [3.18 Spot Instances & Spot Fleet](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#318-spot-instances--spot-fleet)
+   - [3.19 EC2 Instance Types Deep Dive](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#319-ec2-instance-types-deep-dive)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
