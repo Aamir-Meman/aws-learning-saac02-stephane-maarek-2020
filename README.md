@@ -13,7 +13,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [3.19 EC2 Instance Types Deep Dive](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#319-ec2-instance-types-deep-dive)
    - [3.20 EC2 AMIs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#320-ec2-amis)
    - [3.21 Cross Account AMI Copy (FAQ + Exam Tip)](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#321-cross-account-ami-copy-faq--exam-tip)
-   - [3.22 3.22 EC2 Placement Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#322-ec2-placement-groups)
+   - [3.22 EC2 Placement Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#322-ec2-placement-groups)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
