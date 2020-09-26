@@ -12,6 +12,8 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [3.18 Spot Instances & Spot Fleet](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#318-spot-instances--spot-fleet)
    - [3.19 EC2 Instance Types Deep Dive](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#319-ec2-instance-types-deep-dive)
    - [3.20 EC2 AMIs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#320-ec2-amis)
+   - [3.21 Cross Account AMI Copy (FAQ + Exam Tip)](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#321-cross-account-ami-copy-faq--exam-tip)
+   - [3.22 3.22 EC2 Placement Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#322-ec2-placement-groups)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
@@ -327,8 +329,8 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
   - You can't copy an encrypted AMI that was shared with you from another account. Instead, if the underlying snapshot and encryption key were shared with you, you can copy the snapshot while re-encrypting it with a key of your own. You own the copied snapshot, and can register it as a new AMI.
   - You can't copy an AMI with an associated **billingProduct** code that was shared with you from another account.This includes Windows AMIs and AMIs from the AWS Marketplace. To copy a shared AMI with a **billingProduct** code, launch an EC2 instance in your account using the shared AMI and then create an AMI from the instance.
  
-  ## 3.22 EC2 Placement Groups
- **Q=1 What are EC2 Placement Groups?**
+## 3.22 EC2 Placement Groups
+**Q=1 What are EC2 Placement Groups?**
   - Sometime you want control over the EC2 Instance placement strategy.
   - That strategy can be defined usig placement groups.
   - When you create a placement group, you specify one of the following strategies for the group:
