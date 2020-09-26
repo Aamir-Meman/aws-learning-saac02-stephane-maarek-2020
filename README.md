@@ -317,3 +317,22 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - Overall it is **quite inexpensive** to store private AMIs
 - Make sure to remove the AMIs you don't use.
 -------
+## 3.21 Cross Account AMI Copy (FAQ + Exam Tip)
+**Q=1 What are the permissions for cross account AMIs copy?**
+- You can share an AMI with another AWS account.
+- Sharing an AMI does not affect the ownership of the AMI.
+- If you **copy** an AMI that has been shared with your account, you are the **owner** of the target AMI in your account.
+- To copy an AMI that was shared with you from another account, **the owner of the source AMI must grant you read permissions for the storage that backs the AMI, either the associated EBS snapshot(for an Amazon EBS-backed AMI) or an associated S3 bucket(for an instance store-backed AMI)**.
+- **Limits**:
+  - You can't copy an encrypted AMI that was shared with you from another account. Instead, if the underlying snapshot and encryption key were shared with you, you can copy the snapshot while re-encrypting it with a key of your own. You own the copied snapshot, and can register it as a new AMI.
+  - You can't copy an AMI with an associated **billingProduct** code that was shared with you from another account.This includes Windows AMIs and AMIs from the AWS Marketplace. To copy a shared AMI with a **billingProduct** code, launch an EC2 instance in your account using the shared AMI and then create an AMI from the instance.
+ 
+  ## 3.22 EC2 Placement Groups
+ **Q=1 What are EC2 Placement Groups?**
+  - Sometime you want control over the EC2 Instance placement strategy.
+  - That strategy can be defined usig placement groups.
+  - When you create a placement group, you specify one of the following strategies for the group:
+    - **Cluster** - clusters instances into a low-latency group in a single Availability Zone.
+    - **Spread** - spread instances across underlying hardware (max 7 instances per group per AZ)**critical applications**.
+    - **Partition** -spread instances across many **different partitions** (which rely on different sets of racks)within an AZ. Scales to 100 of EC2 instances per group (Hadoop, Cassandra, Kafka)
+---
