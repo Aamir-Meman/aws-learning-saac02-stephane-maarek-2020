@@ -14,6 +14,8 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [3.20 EC2 AMIs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#320-ec2-amis)
    - [3.21 Cross Account AMI Copy (FAQ + Exam Tip)](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#321-cross-account-ami-copy-faq--exam-tip)
    - [3.22 EC2 Placement Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#322-ec2-placement-groups)
+   - [3.23 Elastic Network Interfaces (ENI) with hands On](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#323-elastic-network-interfaces-eni-with-hands-on)
+   - [3.24  EC2 Hibernate](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#324-ec2-hibernate)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
@@ -376,7 +378,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - A MAC address
  - **You can create ENI independently and attach them on the fly(move them) on EC2 instances for failover**
  - Bound to a specific availability zone (AZ)
- ----
+ 
 ## 3.24 EC2 Hibernate
 **Q=1 What are EC2 Hibernate**
  - We know we can stop, terminate instances
