@@ -378,7 +378,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - A MAC address
  - **You can create ENI independently and attach them on the fly(move them) on EC2 instances for failover**
  - Bound to a specific availability zone (AZ)
- 
+
 ## 3.24 EC2 Hibernate
 **Q=1 What are EC2 Hibernate**
  - We know we can stop, terminate instances
@@ -397,3 +397,13 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - **long-running processing**
    - **saving the RAM state**
    - **services that take time to initialize**
+
+**Q=2 EC2 Hibernate - Good to know**
+ - Supported instance families - C3,C4,C5,M3,M4,M5,R3,R4 and R5
+ - Instance RAM Size - must be less than 150 GB.
+ - Instance size - not supported for bare metal instances.
+ - AMI - Amazon Linux 2, Linux AMI, Ubuntu and Windows
+ - Root Volume - must be **EBS**,encrypted,not instance store and **large**
+ - Avaialaible for On-Demand and Reserved Instances
+ - An instance cannot be hibernated more than 60 days.
+ 
