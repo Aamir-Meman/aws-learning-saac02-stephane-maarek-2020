@@ -19,6 +19,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
 - [Section 4 High Availability and Scalability: ELB and ASG](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-4-high-availability-and-scalability-elb-and-asg)
    - [4.1 High Availability and Scalability](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#41-high-availability-and-scalability)
    - [4.2 Elastic Load Balancing (ELB) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#42-elastic-load-balancing-elb-overview)
+   - [4.3 Classic Load Balancer(CLB) with Hands On](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#43-classic-load-balancerclb-with-hands-on)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
