@@ -471,3 +471,38 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
     - AWS provides only a few configuration knobs
   - It costs less to setup your own load balancer but it will be a lot more effort on your end.
   - It is integrated with many AWS offerings/ services.
+
+ **Q=4 What is a Health Check?**
+  - Health Checks are crucial for Load Balancers
+  - They enable the load balancer to know if instances it forwards traffic to are available to reply to requests.
+  - The health check is done on a **port** and a **route** (/health is common)
+  - If the response is not 200 (OK), then the instance is unhealthy
+
+**Q=5 Types of Load Balancer**
+ - AWS has 3 kinds of managed load balancers:
+   - Classic Load Balancer(v1 - old generation) - 2009
+     - HTTP, HTTPS, TCP
+   - Application Load Balancer (v2 - new generation) - 2016
+     - **HTTP, HTTPS, WebSocket**
+   - Network Load Balancer (v2- new generation) - 2017
+     - **TCP, TLS (secure TCP) & UDP (secure UDP)**
+ - Overall, it is recommended to use the newer/v2 generation load balancers as they provide more features.
+ - You can setup **internal(private) or external(public) ELBs**.
+
+**Q=6 Load Balancer Good to Know**
+ - LBs can scale but not instantaneously - contact AWS for a "warm-up"
+ - Troubleshooting
+   - 4xx errors are client induced errors
+   - 5xx errors are application induced errors
+   - Load Balancer Errors 503 means at capacity or no registered target
+   - If the LB cannot connect to your application, check your security groups.
+ - Monitoring
+   - ELB access logs will log all access requests (so you can debug per request)
+   - CloudWatch Metrics will give you aggregate statistics (ex: connections count)
+
+## 4.3 Classic Load Balancer(CLB) with Hands On
+**Q=1 Why Classic Load Balancer(v1)**
+ - Support TCP (Layer 4), HTTP and HTTPS (Layer 7)
+ - **Health checks are TCP or HTTP based**
+ - Fixed hostname
+   - xxx.region.elb.amazonaws.com
