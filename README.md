@@ -363,4 +363,35 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - A partition failure can affect many EC2 but won't affect other partitions.
  - EC2 instances get access to the partition information as metadata
  - Use cases:
-  - **HDFS, HBase, Cassandra, Kafka**
+   - **HDFS, HBase, Cassandra, Kafka**
+
+## 3.23 Elastic Network Interfaces (ENI) with hands On
+**Q=1 What is Elastic Network Interfaces(ENI)?**
+ - Logical component in a VPC that represents a **virtual network card**
+ - The ENI can have the following attributes:
+   - **Primary private IPv4, one or more secondary private IPv4**
+   - One Elastic IP (IPv4) per private IPv4
+   - One Public IP (IPv4)
+   - One or more security groups
+   - A MAC address
+ - **You can create ENI independently and attach them on the fly(move them) on EC2 instances for failover**
+ - Bound to a specific availability zone (AZ)
+ ----
+## 3.24 EC2 Hibernate
+**Q=1 What are EC2 Hibernate**
+ - We know we can stop, terminate instances
+   - Stop: The data on disk(EBS) is kept intact in the next start.
+   - Terminate: any EBS volumes(root) also set-up to be destroyed is lost.
+ - On start, the following happens:
+   - First start: the OS boots and the EC2 User Data script is run
+   - Following starts: the OS boots up.
+   - **Then your application starts, caches get warmed up, and that can take time!**
+ - Introducing **EC2 Hibernate**:
+   - The in-memory(RAM) state is preserved.
+   - The instance boot is much faster!(the OS is not stopped/restarted)
+   - **Under the hood: the RAM state is written to a file in the root EBS volume**
+   - **The root EBS volume must be encrypted**
+ - Use cases:
+   - **long-running processing**
+   - **saving the RAM state**
+   - **services that take time to initialize**
