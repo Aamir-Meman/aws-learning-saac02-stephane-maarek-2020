@@ -16,7 +16,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [3.22 EC2 Placement Groups](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#322-ec2-placement-groups)
    - [3.23 Elastic Network Interfaces (ENI) with hands On](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#323-elastic-network-interfaces-eni-with-hands-on)
    - [3.24  EC2 Hibernate](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#324-ec2-hibernate)
-- [Section 4 Section 4 High Availability and Scalability: ELB and ASG](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-4-high-availability-and-scalability-elb-and-asg)
+- [Section 4 High Availability and Scalability: ELB and ASG](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-4-high-availability-and-scalability-elb-and-asg)
    - [4.1 High Availability and Scalability](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#41-high-availability-and-scalability)
    - [4.2 Elastic Load Balancing (ELB) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#42-elastic-load-balancing-elb-overview)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
