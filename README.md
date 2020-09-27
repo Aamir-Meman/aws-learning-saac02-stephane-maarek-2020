@@ -406,4 +406,66 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - Root Volume - must be **EBS**,encrypted,not instance store and **large**
  - Avaialaible for On-Demand and Reserved Instances
  - An instance cannot be hibernated more than 60 days.
- 
+
+# Section 4 High Availability and Scalability: ELB and ASG
+
+## 4.1 High Availability and Scalability
+**Q=1 What does it mean by Scalability and High Availability**
+ - Scalability means that an application can handle greater loads by adapting
+ - There are 2 kinds of scalability:
+   - Vertical Scalability
+   - Horizontal Scalability(= elasticity)
+ - **Scalability is linked but different to High Availability**
+
+ **Q=2 What is Vertical Scalability?**
+  - Vertically Scalability means increasing the size of the instance
+  - For example, your application runs on a t2.micro
+  - Scaling that application vertically means running it on a t2.large
+  - Vertical Scalability is very common for non distributed systems such as Database.
+  - **RDS,ElasticCache are service that can scale vertically.**
+  - There's usually a limit to how much you can vertically scale(hardware limit)
+
+**Q=3 What is Horizontal Scalability?**
+ - Horizontal Scalability means **increasing the number of instances / systems for your application**
+ - Horizontal scaling implies distributed systems
+ - This is very common for web applications/ modern applications.
+ - It is easy to horizontally scale thanks the cloud offerings such as **Amazon EC2** 
+
+**Q=4 What is High Availability?**
+ - High Availability usually goes hand in hand with **horizontal scaling**.
+ - High Availability means running your application / system in at least 2 data centers (== Availability Zones)
+ - The goal of high availability is to survive a data center loss.
+ - **The high availability can be passive (for RDS Multi AZ for example)**.
+ - **The high availability can be active (for horizontal scaling)**
+
+**Q=5 High Availability and Scalability for EC2**
+ - Vertical Scaling: Increase instance size **(= scale up / down)**
+ - Horizontal Scaling: Increase number of instances **(= scale out / in)**
+   - ASG(Auto Scaling Group)
+   - Load Balancer
+ - **High Availability: Run instances for the same application across Multi AZ**
+   - Auto Scaling Group multi AZ
+   - Load Balancer multi AZ
+
+## 4.2 Elastic Load Balancing (ELB) Overview
+**Q=1 What is Load Balancing?**
+ - Load balancers are servers that forward internet traffic to multiple servers (EC2 Instances) downstream.
+
+**Q=2 Why use a Load Balancer**
+ - Spread load across multiple downstream instances.
+ - Expose a single point of access (DNS) to your application.
+ - Seamlessly handle failures of downstream instances.
+ - Do regular health checks to your instances.
+ - Provide SSL termination (HTTPS) for your websites.
+ - Enforce stickiness with cookies.
+ - High availability across zones.
+ - Seperate public traffic from private traffic.
+
+ **Q=3 Why use an EC2 Load Balancer?**
+  - An ELB(EC2 Load Balancer) is a **managed load balancer**
+    - AWS guarantees that it will be working
+    - AWS takes care of upgrades, maintenance, high availability
+    - AWS provides only a few configuration knobs
+  - It costs less to setup your own load balancer but it will be a lot more effort on your end.
+  - It is integrated with many AWS offerings/ services.
+  
