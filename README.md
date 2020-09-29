@@ -507,3 +507,11 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - **Health checks are TCP or HTTP based**
  - Fixed hostname
    - xxx.region.elb.amazonaws.com
+
+## 4.4 Application Load Balancer (v2)
+**Q=1 What is an application load balancer(ALB)?**
+ - Application Load Balancers is Layer 7 (HTTP).
+ - Load Balancing to **multiple HTTP applications** across machines(target groups)
+ - Load Balancing to **multiple applications** on the same machine (ex:containers)
+ - Support for HTTP/2 and WebSocket
+ - Support redirects (from HTTP to HTTPS for example)
