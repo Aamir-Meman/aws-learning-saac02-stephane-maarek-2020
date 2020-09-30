@@ -21,6 +21,7 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [4.2 Elastic Load Balancing (ELB) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#42-elastic-load-balancing-elb-overview)
    - [4.3 Classic Load Balancer(CLB) with Hands On](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#43-classic-load-balancerclb-with-hands-on)
    - [4.4 Application Load Balancer (v2)](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#44-application-load-balancer-v2)
+   - [4.5 Network Load Balancer](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#45-network-load-balancer)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
