@@ -516,3 +516,33 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - Load Balancing to **multiple applications** on the same machine (ex:containers)
  - Support for HTTP/2 and WebSocket
  - Support redirects (from HTTP to HTTPS for example)
+ - Routing tables to different target groups:
+   - Routing based on **path** in URL (example.com/users & example.com/posts)
+   - Routing based on **hostname** in URL (one.example.com & other.example.com)
+   - Routing based on Query String, Headers (example.com/users?**id=123&order=false**)
+ - ALB are a great fit for microservices and container-based application(example: Docker and Amazon ECS)
+ - Has a port mapping feature to redirect to a dynamic port in ECS
+ - **In comparison, we'd need multiple Classic Load Balancer per application**
+
+**Q=2 What are the Target groups**
+ - EC2 instances (can be managed by an Auto Scaling Group) - HTTP
+ - ECS tasks (managed by ECS itself) - HTTP
+ - Lambda functions - HTTP request is translated into a JSON event.
+ - IP Addresses - must be **private IPs** 
+ - ALB can route to multiple target groups.
+ - Health checks are at the target group level. 
+
+**Q=3 Good to know**
+ - Fixed hostname (xxx.region.elb.amazonaws.com)
+ - The application servers don't see the IP of the client directly.
+   - The true IP of the client is inserted in the header X-Forwarded-For
+   - We can also get Port (X-Forwarded-Port) and proto (X-Forwarded-Proto)
+
+## 4.5 Network Load Balancer
+**Q=1 What is NLB(v2)?**
+ - NLB's(Layer 4) allow to:
+   - **Forward TCP & UDP traffic to your instances**
+   - Handle millions of request per seconds
+   - Less latency ~100ms (vs 400 ms for ALB)
+ - NLB has **one static IP per AZ**, and supports assigning Elastic IP (helpful for whitelisting specific IP)
+ - NLB are used for **extreme performance, TCP or UDP traffic**
