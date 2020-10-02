@@ -22,6 +22,11 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [4.3 Classic Load Balancer(CLB) with Hands On](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#43-classic-load-balancerclb-with-hands-on)
    - [4.4 Application Load Balancer (v2)](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#44-application-load-balancer-v2)
    - [4.5 Network Load Balancer](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#45-network-load-balancer)
+   - [4.6 Load Balancer Stickiness](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#46-load-balancer-stickiness)
+   - [4.7 Cross-Zone Load Balancing](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#47-cross-zone-load-balancing)
+   - [4.8 SSL/TLS - Basics](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#48-ssltls---basics)
+   - [4.9 ELB - Connection Draining](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#49-elb---connection-draining)
+   - [4.10 Auto Scaling Groups(ASG) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#410-auto-scaling-groupsasg-overview)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
@@ -672,4 +677,3 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - **ASG are free**. You pay for the underlying resources being launched.
  - Having instances under an ASG means that if they get terminated for whatever reason, the ASG will automatically **create new ones as a replacement**. Extra safety!
  - ASG can terminate instances marked as unhealthy by a LB (and hence replace them)
- 
