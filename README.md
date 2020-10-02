@@ -547,3 +547,129 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - Less latency ~100ms (vs 400 ms for ALB)
  - NLB has **one static IP per AZ**, and supports assigning Elastic IP (helpful for whitelisting specific IP)
  - NLB are used for **extreme performance, TCP or UDP traffic**
+
+## 4.6 Load Balancer Stickiness
+**Q=1 What is Load Balancer Stickiness?**
+ - It is possible to implement stickiness so that the same client is always redirected to the same instance behind a load balancer.
+ - This works for Classic Load Balancers & Application Load Balancers.
+ - The "cookie" used for stickiness has an expiration date you control.
+ - Use case: make sure the user doesn't lose his session data
+ - Enabling stickiness may bring imabalance to the load over the backend EC2 instances.
+
+## 4.7 Cross-Zone Load Balancing
+**Q=1 What is Cross-Zone Load Balancing?**
+ - **With Cross-Zone Load Balancing: each load balancer instance distributes evenly across all registered instances in all AZ**
+ - Otherwise, each load balancer node distributes requests evenly across the registered instances in its Availability Zone only.
+ - Classic Load Balancer
+   - Disabled by default
+   - No charges for inter AZ data if enabled
+ - Application Load Balancer
+   - Always on (can't be disabled)
+   - No charges for inter AZ data 
+ - Network Load Balancer
+   - Disabled by default
+   - **You pay charges($) for inter AZ data if enabled**
+
+## 4.8 SSL/TLS - Basics
+**Q=1 What is a SSL/TLS?**
+ - An SSL Certificate allows traffic between your clients and your load balancer to be encrypted in transit (in-flight encryption)
+ - **SSL** refers to Secure Sockets Layer, used to encrypt connections
+ - **TLS** refers to Transport Layer Security, which is a newer version
+ - Nowadays, **TLS certificates are mainly used**, but people still refer as SSL
+ - Public SSL certificates are issued by Certificate Authorities (CA)
+ - Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt, etc
+ - SSL certficates have an expiration date (you set) and must be renewed
+
+**Q=2 What is the Load Balancer - SSL Certificates** 
+ - The load balancer uses an X.509 certificate (SSL/TLS server certificate)
+ - You can manage certificates using **ACM** (AWS Certificate Manager)
+ - You can create upload your own certificates alternatively
+ - HTTPS listener:
+   - You must specify a default certificate
+   - You can add an optional list of certs to support multiple domains
+   - **Clients can use SNI (Server Name Indication) to specify the hostname they reach**
+   - Ability to specify a security policy to support older versions of SSL /TLS (legacy clients)
+
+**Q=3 What is the SSL - Server Name Indication(SNI)**
+ - SNI solves the problem of loading **multiple SSL certificates onto one web server** (to serve multiple websites)
+ - It is a "newer" protocol, and requires the client to **indicate** the hostname of the target server in the initial SSL handshake
+ - The server will then find the correct certificate, or return the default one
+ - Note: 
+   - Only works for **ALB** and **NLB** (newer generation), CloudFront
+   - Does not work for CLB (older generation)
+
+**Q=4 What is Elastic Load Balancers - SSL Certificates**
+ - Classic Load Balancer
+   - Support only one SSL certificate
+   - Must use multiple CLB for multiple hostname with multiple SSL certificates
+ - Application Load Balancer (v2)
+   - Supports multiple listeners with multiple SSL certificates
+   - Uses Server Name Indication (SNI) to make it work
+ - Network Load Balancer (v2)
+   - Supports multiple listeners with multiple SSL certificates
+   - Uses Server Name Indication (SNI) to make it work
+
+## 4.9 ELB - Connection Draining
+**Q=1 What is an ELB connection Draining?**
+ - Feature nameing:
+    - CLB: Connection Draining
+    - Target Group: Deregisteration Delay (for ALB & NLB)
+ - **Time to complete "in-flight requests" while the instance is de-registering or unhealthy**
+ - Stops sending new requests to the instance which is de-registering
+ - Between 1 to 3600 seconds, default is 300 seconds
+ - Can be disabled (set value to 0)
+ - **Set to a low value if your requests are short**
+
+## 4.10 Auto Scaling Groups(ASG) Overview
+**Q=1 What is an Auto Scaling Group?**
+ - In real-life, the load on your websites and application can change
+ - In the cloud, you can create and get rid of servers very quickly
+ - The goal of an Auto Scaling Group(ASG) is to:
+   - Scale out(add EC2 instance) to match an increased load
+   - Scale in (remove EC2 instance) to match a decreased load
+   - Ensure we have a minimum and a maximum number of machines running.
+   - Automatically Register new instances to a load balancer
+
+**Q=2 What is the attribute used in defining ASGs** 
+ - A launch configuration
+   - AMI + Instance Type
+   - EC2 User Data
+   - EBS Volumes
+   - Security Groups
+   - SSH Key Pair
+ - Min Size/ Max Size / Initial Capacity
+ - Network + Subnets Information
+ - Load Balancer Information
+ - Scaling Policies 
+
+**Q=3 What is an Auto Scaling Alarms**
+ - It is possible to scale an ASG based on CloudWatch alarms.
+ - An Alarm monitors a metric (such as average cpu)
+ - **Metrics are computed for the overall ASG instances**
+ - Based on the alarm:
+   - We can create scale-out policies (increase the number of instances)
+   - We can create scale-in policies (decrease the number of instances)
+
+**Q=4 What is an Auto Scaling New Rules**
+ - It is now possible to define "better" auto scaling rules that are directly managed by EC2 instances
+   - Target Average CPU Usage
+   - Number of requests on the ELB per instance
+   - Average Network In
+   - Average Network Out
+ - These rules are easier to set up and can make more sense 
+
+**Q=5 What are Auto Scaling Custom Metrics**
+ - We can auto scale based on a custom metric (ex: number of connected users)
+ - 1. Send custom metric from application on EC2 to CloudWatch (PutMetricAPI)
+ - 2. Create CloudWatch alarm to react to low/ high values
+ - 3. Use the CloudWatch alarm as the scaling policy for ASG
+
+**Q=6 What is an ASG Brain Dump**
+ - Scaling policies can be on CPU, Network...and can even be on custom metrics or based on a schedule (if you know your visitors patterns)
+ - ASGs use Launch configurations or Launch Templates(newer)
+ - To update an ASG, you must provide a new launch configuration / launch template
+ - IAM roles are attached to an ASG will get assigned to EC2 instances
+ - **ASG are free**. You pay for the underlying resources being launched.
+ - Having instances under an ASG means that if they get terminated for whatever reason, the ASG will automatically **create new ones as a replacement**. Extra safety!
+ - ASG can terminate instances marked as unhealthy by a LB (and hence replace them)
+ 
