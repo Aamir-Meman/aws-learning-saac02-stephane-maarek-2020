@@ -1,5 +1,6 @@
 # aws-learning-saac02-stephane-maarek-2020
 This is the notes created from Stephane Maarek course - AWS SAACO2 2020
+The course link is [Ultimate AWS CSA Associate 2020](https://www.udemy.com/share/102CPBAEYTdFxbQ3Q=/)
 - [Section 1: Introduction - AWS Certified Solutions Architect Associate](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-1-introduction---aws-certified-solutions-architect-associate)
 - [Section 3 AWS Fundamentals: IAM and EC2](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-3-aws-fundamentals-iam-and-ec2)
    - [3.1 AWS Regions and AZs](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#31-aws-regions-and-azs)
