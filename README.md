@@ -679,3 +679,47 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
  - **ASG are free**. You pay for the underlying resources being launched.
  - Having instances under an ASG means that if they get terminated for whatever reason, the ASG will automatically **create new ones as a replacement**. Extra safety!
  - ASG can terminate instances marked as unhealthy by a LB (and hence replace them)
+
+## 4.12 Auto Scaling Group - Scaling Policies
+**Q=1 What are ASG - Scaling Policies?**
+ - **Target Tracking Scaling**
+    - Most simple and easy to set-up
+    - Example: I want the average ASG CPU to stay at around 40% 
+ - **Simple/Step Scaling**
+    - When a CloudWatch alarm is triggered (example CPU > 70%), then add 2 units
+    - When a CloudWatch alarm is triggered (example CPU < 30%), then remove 1 unit
+ - **Scheduled Actions**
+    - Anticipate a scaling based on known usage patterns
+    - Example: increase the min capacity to 10 at 5 pm on Fridays
+
+**Q=2 What are ASG - Scaling Cooldowns?**
+ - **The cooldown period helps to ensure that your ASG does not launch or terminate additional instances before the previous scaling activity takes effect**
+ - In addition to default cooldown for ASG, we can create cooldowns that apply to a specific **simple scale policy**
+ - A scaling-specific cooldown period overrides the **default** cooldown period.
+ - One common use for scaling-specific cooldowns is with a **scale-in** policy - a policy that terminates instances based on a specific criteria or metric. Because this policy terminates instances, Amazon EC2 Auto Scaling needs less time to determine whether to terminate additional instances.
+ - **if the default cooldown period of 300 seconds is too long - you can reduce costs by applying a scaling-specific cooldown period of 180 seconds to the scale-in policy.**
+ - If you application is scaling up and down multiple times each hour, modify the ASG cool-down timers and the CloudWatch Alarm Period that triggers the scale in.
+
+ ## 4.13 ASG for Solutions Architect
+ **Q=1 What points are important in terms of ASG's**
+  - ASG Default Termination Policy (simplified version):
+    - Find the AZ which has the most number of instances
+    - If there are multiple instances in the AZ to choose from, delete the one with the oldest launch configuration
+  - **ASG tries the balance the number of instances across AZ by default**
+
+**Q=2 What is the Lifecycle Hooks for ASG**
+ - By default as soon as an instance is launched in an ASG it's in service.
+ - You have the ability to perform extra steps before the instance goes in service (Pending state).
+ - You have the ability to perform extra actions before the instance is terminated (Terminating state).
+
+**Q= Difference between Launch Template and Launch Configuration**
+ - Both
+   - ID of the Amazon Machine Image (AMI), the instance type, a key pair, security groups, and the other parameters that you use to launch EC2 instances (tags, EC2 user-data...)
+ - Launch Configuration(Legacy)
+   - Must be re-created every time 
+ - Launch Template(newer)
+   - Can have multiple versions
+   - Create parameters subsets (partial configuration for re-use and inheritance)
+   - Provision using both On-Demand and Spot instances (or a mix)
+   - Can use T2 unlimited burst feature
+   - Recommend by AWS going forward
