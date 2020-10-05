@@ -29,6 +29,8 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [4.8 SSL/TLS - Basics](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#48-ssltls---basics)
    - [4.9 ELB - Connection Draining](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#49-elb---connection-draining)
    - [4.10 Auto Scaling Groups(ASG) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#410-auto-scaling-groupsasg-overview)
+   - [4.12 Auto Scaling Group - Scaling Policies](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#412-auto-scaling-group---scaling-policies)
+   - [4.13 ASG for Solutions Architect](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#413-asg-for-solutions-architect)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
