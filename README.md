@@ -31,6 +31,16 @@ This is the notes created from Stephane Maarek course - AWS SAACO2 2020
    - [4.10 Auto Scaling Groups(ASG) Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#410-auto-scaling-groupsasg-overview)
    - [4.12 Auto Scaling Group - Scaling Policies](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#412-auto-scaling-group---scaling-policies)
    - [4.13 ASG for Solutions Architect](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#413-asg-for-solutions-architect)
+- [Section 5 EC2 Storage- EBS and EFS](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#section-5-ec2-storage---ebs-and-efs)  
+   - [5.1 EBS Intro](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#51-ebs-intro)
+   - [5.3 EBS Volume Types Deep Dive](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#53-ebs-volume-types-deep-dive)
+   - [5.4 EBS Operations: Snapshots](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#54-ebs-operations-snapshots)
+   - [5.5 EBS Operations: Migrations](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#55-ebs-operations-migrations)
+   - [5.6 EBS Operations: Volume Encryption](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#56-ebs-operations-volume-encryption)
+   - [5.7 EBS vs Instance Store](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#57-ebs-vs-instance-store)
+   - [5.8 EBS RAID Configuration](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#58-ebs-raid-configuration)
+   - [5.9 EFS Overview](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#59-efs-overview)
+   - [5.12 EBS vc EFS - Elastic Block Storage](https://github.com/Aamir-Meman/aws-learning-saac02-stephane-maarek-2020#512-ebs-vc-efs---elastic-block-storage)
 # Section 1: Introduction - AWS Certified Solutions Architect Associate
 ## 1.0 What is AWS
 - Amazon Web Services is a Cloud Provider.
